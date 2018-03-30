@@ -35,7 +35,8 @@ public class BookController {
     private String list(Model model) {
         logger.info("gagaggagga11111111111111");
         List<Book> list = bookService.getList();
-        model.addAttribute(list);
+        model.addAttribute("list", list);
+        model.addAttribute("liao", "123123");
         return "list";
     }
 

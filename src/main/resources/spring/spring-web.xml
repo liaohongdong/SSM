@@ -33,4 +33,14 @@
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="cn.liaohongdong.ssm.web"/>
 
+    <mvc:interceptors>
+        <!-- 使用 bean 定义一个 Interceptor，直接定义在 mvc:interceptors 下面的 Interceptor 将拦截所有的请求 -->
+        <mvc:interceptor>
+            <!-- 拦截指定方法 -->
+            <mvc:mapping path="/book/list"/>
+            <!-- 定义在 mvc:interceptor 下面的 Interceptor，表示对特定的请求进行拦截 -->
+            <bean class="cn.liaohongdong.ssm.interceptor.TestInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
