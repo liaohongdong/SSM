@@ -1,38 +1,26 @@
 package cn.liaohongdong.ssm.entity;
 
 public class UserAddress {
-
-    private int address_id;
-
-    private int address_name;
-
-    private int user_id;
-
-    private int consignee;
-
-    private int email;
-
+    private int addressId;
+    private String addressName;
+    private int userId;
+    private String consignee;
+    private String email;
     private int country;
-
-    private int province;
-
-    private int city;
-
-    private int area;
-
-    private int address;
-
+    private String province;
+    private String city;
+    private String area;
+    private String address;
     private int mobile;
-
-    private int best_time;
+    private String bestTime;
 
     public UserAddress() {
     }
 
-    public UserAddress(int address_id, int address_name, int user_id, int consignee, int email, int country, int province, int city, int area, int address, int mobile, int best_time) {
-        this.address_id = address_id;
-        this.address_name = address_name;
-        this.user_id = user_id;
+    public UserAddress(int addressId, String addressName, int userId, String consignee, String email, int country, String province, String city, String area, String address, int mobile, String bestTime) {
+        this.addressId = addressId;
+        this.addressName = addressName;
+        this.userId = userId;
         this.consignee = consignee;
         this.email = email;
         this.country = country;
@@ -41,46 +29,46 @@ public class UserAddress {
         this.area = area;
         this.address = address;
         this.mobile = mobile;
-        this.best_time = best_time;
+        this.bestTime = bestTime;
     }
 
-    public int getAddress_id() {
-        return address_id;
+    public int getAddressId() {
+        return addressId;
     }
 
-    public void setAddress_id(int address_id) {
-        this.address_id = address_id;
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
-    public int getAddress_name() {
-        return address_name;
+    public String getAddressName() {
+        return addressName;
     }
 
-    public void setAddress_name(int address_name) {
-        this.address_name = address_name;
+    public void setAddressName(String addressName) {
+        this.addressName = addressName;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getConsignee() {
+    public String getConsignee() {
         return consignee;
     }
 
-    public void setConsignee(int consignee) {
+    public void setConsignee(String consignee) {
         this.consignee = consignee;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -92,35 +80,35 @@ public class UserAddress {
         this.country = country;
     }
 
-    public int getProvince() {
+    public String getProvince() {
         return province;
     }
 
-    public void setProvince(int province) {
+    public void setProvince(String province) {
         this.province = province;
     }
 
-    public int getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(int city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
-    public int getArea() {
+    public String getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(String area) {
         this.area = area;
     }
 
-    public int getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(int address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
@@ -132,29 +120,29 @@ public class UserAddress {
         this.mobile = mobile;
     }
 
-    public int getBest_time() {
-        return best_time;
+    public String getBestTime() {
+        return bestTime;
     }
 
-    public void setBest_time(int best_time) {
-        this.best_time = best_time;
+    public void setBestTime(String bestTime) {
+        this.bestTime = bestTime;
     }
 
     @Override
     public String toString() {
         return "UserAddress{" +
-                "address_id=" + address_id +
-                ", address_name=" + address_name +
-                ", user_id=" + user_id +
-                ", consignee=" + consignee +
-                ", email=" + email +
+                "addressId=" + addressId +
+                ", addressName='" + addressName + '\'' +
+                ", userId=" + userId +
+                ", consignee='" + consignee + '\'' +
+                ", email='" + email + '\'' +
                 ", country=" + country +
-                ", province=" + province +
-                ", city=" + city +
-                ", area=" + area +
-                ", address=" + address +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", area='" + area + '\'' +
+                ", address='" + address + '\'' +
                 ", mobile=" + mobile +
-                ", best_time=" + best_time +
+                ", bestTime='" + bestTime + '\'' +
                 '}';
     }
 }

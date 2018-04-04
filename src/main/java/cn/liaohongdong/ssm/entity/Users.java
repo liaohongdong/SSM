@@ -3,127 +3,55 @@ package cn.liaohongdong.ssm.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * Users 用户实体
- */
 public class Users {
     private int userId;
-
     private String username;
-
     private String password;
-
     private int qq;
-
     private String wechat;
-
     private String email;
-
     private String mobile;
-
     private String province;
-
     private String city;
-
     private String area;
-
     private String address;
-
     private String nickname;
-
     private int level;
-
     private String order;
-
-    private String sex;
-
+    private int sex;
     private Date birthday;
-
-    private BigDecimal user_money;
-
-    private BigDecimal frozen_money;
-
-    private int pay_points;
-
-    private int rank_points;
-
-    private int address_id;
-
-    private int reg_time;
-
-    private int last_login;
-
-    private Date last_time;
-
-    private String last_ip;
-
-    private int is_special;
-
-    private int parent_id;
-
-    private int flag;
-
-    private int is_validated;
-
-    private BigDecimal max_consumption;
-
-    private int vip_1;
-
-    private int vip_2;
-
-    private int vip_3;
-
-    private int vip_4;
-
-    private int vip_5;
-
-    private int vip_6;
-
+    private BigDecimal userMoney;
+    private BigDecimal frozenoney;
+    private int payPoints;
+    private int rankPoints;
+    private int addressId;
+    private int regTime;
+    private int lastLogin;
+    private Date lastTime;
+    private String lastIp;
+    private int isSpecial;
+    private int parentId;
+    private int falg;
+    private int isValidated;
+    private BigDecimal maxConsumption;
+    private int vip1;
+    private int vip2;
+    private int vip3;
+    private int vip4;
+    private int vip5;
+    private int vip6;
     private UserAddress userAddress;
 
     public Users() {
     }
 
-    public Users(int userId, String username, String password, int qq, String wechat, String email, String mobile, String province, String city, String area, String address, String nickname, int level, String order, String sex, Date birthday, BigDecimal user_money, BigDecimal frozen_money, int pay_points, int rank_points, int address_id, int reg_time, int last_login, Date last_time, String last_ip, int is_special, int parent_id, int flag, int is_validated, BigDecimal max_consumption, int vip_1, int vip_2, int vip_3, int vip_4, int vip_5, int vip_6) {
+    public Users(int userId, String username, String password) {
         this.userId = userId;
         this.username = username;
         this.password = password;
-        this.qq = qq;
-        this.wechat = wechat;
-        this.email = email;
-        this.mobile = mobile;
-        this.province = province;
-        this.city = city;
-        this.area = area;
-        this.address = address;
-        this.nickname = nickname;
-        this.level = level;
-        this.order = order;
-        this.sex = sex;
-        this.birthday = birthday;
-        this.user_money = user_money;
-        this.frozen_money = frozen_money;
-        this.pay_points = pay_points;
-        this.rank_points = rank_points;
-        this.address_id = address_id;
-        this.reg_time = reg_time;
-        this.last_login = last_login;
-        this.last_time = last_time;
-        this.last_ip = last_ip;
-        this.is_special = is_special;
-        this.parent_id = parent_id;
-        this.flag = flag;
-        this.is_validated = is_validated;
-        this.max_consumption = max_consumption;
-        this.vip_1 = vip_1;
-        this.vip_2 = vip_2;
-        this.vip_3 = vip_3;
-        this.vip_4 = vip_4;
-        this.vip_5 = vip_5;
-        this.vip_6 = vip_6;
     }
 
-    public Users(int userId, String username, String password, int qq, String wechat, String email, String mobile, String province, String city, String area, String address, String nickname, int level, String order, String sex, Date birthday, BigDecimal user_money, BigDecimal frozen_money, int pay_points, int rank_points, int address_id, int reg_time, int last_login, Date last_time, String last_ip, int is_special, int parent_id, int flag, int is_validated, BigDecimal max_consumption, int vip_1, int vip_2, int vip_3, int vip_4, int vip_5, int vip_6, UserAddress userAddress) {
+    public Users(int userId, String username, String password, int qq, String wechat, String email, String mobile, String province, String city, String area, String address, String nickname, int level, String order, int sex, Date birthday, BigDecimal userMoney, BigDecimal frozenoney, int payPoints, int rankPoints, int addressId, int regTime, int lastLogin, Date lastTime, String lastIp, int isSpecial, int parentId, int falg, int isValidated, BigDecimal maxConsumption, int vip1, int vip2, int vip3, int vip4, int vip5, int vip6, UserAddress userAddress) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -140,26 +68,26 @@ public class Users {
         this.order = order;
         this.sex = sex;
         this.birthday = birthday;
-        this.user_money = user_money;
-        this.frozen_money = frozen_money;
-        this.pay_points = pay_points;
-        this.rank_points = rank_points;
-        this.address_id = address_id;
-        this.reg_time = reg_time;
-        this.last_login = last_login;
-        this.last_time = last_time;
-        this.last_ip = last_ip;
-        this.is_special = is_special;
-        this.parent_id = parent_id;
-        this.flag = flag;
-        this.is_validated = is_validated;
-        this.max_consumption = max_consumption;
-        this.vip_1 = vip_1;
-        this.vip_2 = vip_2;
-        this.vip_3 = vip_3;
-        this.vip_4 = vip_4;
-        this.vip_5 = vip_5;
-        this.vip_6 = vip_6;
+        this.userMoney = userMoney;
+        this.frozenoney = frozenoney;
+        this.payPoints = payPoints;
+        this.rankPoints = rankPoints;
+        this.addressId = addressId;
+        this.regTime = regTime;
+        this.lastLogin = lastLogin;
+        this.lastTime = lastTime;
+        this.lastIp = lastIp;
+        this.isSpecial = isSpecial;
+        this.parentId = parentId;
+        this.falg = falg;
+        this.isValidated = isValidated;
+        this.maxConsumption = maxConsumption;
+        this.vip1 = vip1;
+        this.vip2 = vip2;
+        this.vip3 = vip3;
+        this.vip4 = vip4;
+        this.vip5 = vip5;
+        this.vip6 = vip6;
         this.userAddress = userAddress;
     }
 
@@ -275,11 +203,11 @@ public class Users {
         this.order = order;
     }
 
-    public String getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
@@ -291,164 +219,164 @@ public class Users {
         this.birthday = birthday;
     }
 
-    public BigDecimal getUser_money() {
-        return user_money;
+    public BigDecimal getUserMoney() {
+        return userMoney;
     }
 
-    public void setUser_money(BigDecimal user_money) {
-        this.user_money = user_money;
+    public void setUserMoney(BigDecimal userMoney) {
+        this.userMoney = userMoney;
     }
 
-    public BigDecimal getFrozen_money() {
-        return frozen_money;
+    public BigDecimal getFrozenoney() {
+        return frozenoney;
     }
 
-    public void setFrozen_money(BigDecimal frozen_money) {
-        this.frozen_money = frozen_money;
+    public void setFrozenoney(BigDecimal frozenoney) {
+        this.frozenoney = frozenoney;
     }
 
-    public int getPay_points() {
-        return pay_points;
+    public int getPayPoints() {
+        return payPoints;
     }
 
-    public void setPay_points(int pay_points) {
-        this.pay_points = pay_points;
+    public void setPayPoints(int payPoints) {
+        this.payPoints = payPoints;
     }
 
-    public int getRank_points() {
-        return rank_points;
+    public int getRankPoints() {
+        return rankPoints;
     }
 
-    public void setRank_points(int rank_points) {
-        this.rank_points = rank_points;
+    public void setRankPoints(int rankPoints) {
+        this.rankPoints = rankPoints;
     }
 
-    public int getAddress_id() {
-        return address_id;
+    public int getAddressId() {
+        return addressId;
     }
 
-    public void setAddress_id(int address_id) {
-        this.address_id = address_id;
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
-    public int getReg_time() {
-        return reg_time;
+    public int getRegTime() {
+        return regTime;
     }
 
-    public void setReg_time(int reg_time) {
-        this.reg_time = reg_time;
+    public void setRegTime(int regTime) {
+        this.regTime = regTime;
     }
 
-    public int getLast_login() {
-        return last_login;
+    public int getLastLogin() {
+        return lastLogin;
     }
 
-    public void setLast_login(int last_login) {
-        this.last_login = last_login;
+    public void setLastLogin(int lastLogin) {
+        this.lastLogin = lastLogin;
     }
 
-    public Date getLast_time() {
-        return last_time;
+    public Date getLastTime() {
+        return lastTime;
     }
 
-    public void setLast_time(Date last_time) {
-        this.last_time = last_time;
+    public void setLastTime(Date lastTime) {
+        this.lastTime = lastTime;
     }
 
-    public String getLast_ip() {
-        return last_ip;
+    public String getLastIp() {
+        return lastIp;
     }
 
-    public void setLast_ip(String last_ip) {
-        this.last_ip = last_ip;
+    public void setLastIp(String lastIp) {
+        this.lastIp = lastIp;
     }
 
-    public int getIs_special() {
-        return is_special;
+    public int getIsSpecial() {
+        return isSpecial;
     }
 
-    public void setIs_special(int is_special) {
-        this.is_special = is_special;
+    public void setIsSpecial(int isSpecial) {
+        this.isSpecial = isSpecial;
     }
 
-    public int getParent_id() {
-        return parent_id;
+    public int getParentId() {
+        return parentId;
     }
 
-    public void setParent_id(int parent_id) {
-        this.parent_id = parent_id;
+    public void setParentId(int parentId) {
+        this.parentId = parentId;
     }
 
-    public int getFlag() {
-        return flag;
+    public int getFalg() {
+        return falg;
     }
 
-    public void setFlag(int flag) {
-        this.flag = flag;
+    public void setFalg(int falg) {
+        this.falg = falg;
     }
 
-    public int getIs_validated() {
-        return is_validated;
+    public int getIsValidated() {
+        return isValidated;
     }
 
-    public void setIs_validated(int is_validated) {
-        this.is_validated = is_validated;
+    public void setIsValidated(int isValidated) {
+        this.isValidated = isValidated;
     }
 
-    public BigDecimal getMax_consumption() {
-        return max_consumption;
+    public BigDecimal getMaxConsumption() {
+        return maxConsumption;
     }
 
-    public void setMax_consumption(BigDecimal max_consumption) {
-        this.max_consumption = max_consumption;
+    public void setMaxConsumption(BigDecimal maxConsumption) {
+        this.maxConsumption = maxConsumption;
     }
 
-    public int getVip_1() {
-        return vip_1;
+    public int getVip1() {
+        return vip1;
     }
 
-    public void setVip_1(int vip_1) {
-        this.vip_1 = vip_1;
+    public void setVip1(int vip1) {
+        this.vip1 = vip1;
     }
 
-    public int getVip_2() {
-        return vip_2;
+    public int getVip2() {
+        return vip2;
     }
 
-    public void setVip_2(int vip_2) {
-        this.vip_2 = vip_2;
+    public void setVip2(int vip2) {
+        this.vip2 = vip2;
     }
 
-    public int getVip_3() {
-        return vip_3;
+    public int getVip3() {
+        return vip3;
     }
 
-    public void setVip_3(int vip_3) {
-        this.vip_3 = vip_3;
+    public void setVip3(int vip3) {
+        this.vip3 = vip3;
     }
 
-    public int getVip_4() {
-        return vip_4;
+    public int getVip4() {
+        return vip4;
     }
 
-    public void setVip_4(int vip_4) {
-        this.vip_4 = vip_4;
+    public void setVip4(int vip4) {
+        this.vip4 = vip4;
     }
 
-    public int getVip_5() {
-        return vip_5;
+    public int getVip5() {
+        return vip5;
     }
 
-    public void setVip_5(int vip_5) {
-        this.vip_5 = vip_5;
+    public void setVip5(int vip5) {
+        this.vip5 = vip5;
     }
 
-    public int getVip_6() {
-        return vip_6;
+    public int getVip6() {
+        return vip6;
     }
 
-    public void setVip_6(int vip_6) {
-        this.vip_6 = vip_6;
+    public void setVip6(int vip6) {
+        this.vip6 = vip6;
     }
 
     public UserAddress getUserAddress() {
@@ -476,28 +404,29 @@ public class Users {
                 ", nickname='" + nickname + '\'' +
                 ", level=" + level +
                 ", order='" + order + '\'' +
-                ", sex='" + sex + '\'' +
+                ", sex=" + sex +
                 ", birthday=" + birthday +
-                ", user_money=" + user_money +
-                ", frozen_money=" + frozen_money +
-                ", pay_points=" + pay_points +
-                ", rank_points=" + rank_points +
-                ", address_id=" + address_id +
-                ", reg_time=" + reg_time +
-                ", last_login=" + last_login +
-                ", last_time=" + last_time +
-                ", last_ip='" + last_ip + '\'' +
-                ", is_special=" + is_special +
-                ", parent_id=" + parent_id +
-                ", flag=" + flag +
-                ", is_validated=" + is_validated +
-                ", max_consumption=" + max_consumption +
-                ", vip_1=" + vip_1 +
-                ", vip_2=" + vip_2 +
-                ", vip_3=" + vip_3 +
-                ", vip_4=" + vip_4 +
-                ", vip_5=" + vip_5 +
-                ", vip_6=" + vip_6 +
+                ", userMoney=" + userMoney +
+                ", frozenoney=" + frozenoney +
+                ", payPoints=" + payPoints +
+                ", rankPoints=" + rankPoints +
+                ", addressId=" + addressId +
+                ", regTime=" + regTime +
+                ", lastLogin=" + lastLogin +
+                ", lastTime=" + lastTime +
+                ", lastIp='" + lastIp + '\'' +
+                ", isSpecial=" + isSpecial +
+                ", parentId=" + parentId +
+                ", falg=" + falg +
+                ", isValidated=" + isValidated +
+                ", maxConsumption=" + maxConsumption +
+                ", vip1=" + vip1 +
+                ", vip2=" + vip2 +
+                ", vip3=" + vip3 +
+                ", vip4=" + vip4 +
+                ", vip5=" + vip5 +
+                ", vip6=" + vip6 +
+                ", userAddress=" + userAddress +
                 '}';
     }
 }
