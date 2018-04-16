@@ -8,7 +8,7 @@
         <!-- 具体的sql -->
         SELECT book_id, name, number FROM book WHERE book_id = #{bookId}
     </select>
-
+ 
     <select id="queryAll" resultType="Book">
         SELECT book_id, name, number FROM book ORDER BY book_id  limit #{offset}, #{limit}
     </select>
