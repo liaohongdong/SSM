@@ -24,7 +24,7 @@ public class UsersDaoTest extends BaseTest {
 
         for(Users u: all){
             System.out.println(u.toString());
-            System.out.println(u.getUserAddress().toString());
+//            System.out.println(u.getUserAddress().toString());
         }
     }
 }
