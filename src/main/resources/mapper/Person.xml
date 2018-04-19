@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.liaohongdong.ssm.dao.PersonDao">
+    <select id="selectPersonById" resultType="cn.liaohongdong.ssm.entity.Person">
+        SELECT * from person where pid=#{0} AND name=#{1}
+    </select>
+
+    <select id="selectPersonByIdAnnotation" resultType="cn.liaohongdong.ssm.entity.Person">
+        SELECT * from person where pid=#{pid} AND name=#{name}
+    </select>
+
+    <select id="getAllPerson" resultType="Person">
+        select * from person;
+    </select>
+
+    <update id="updatePersonById" parameterType="Person">
+        UPDATE person set name=#{name},page=#{page} WHERE pid = #{pid}
+    </update>
+
+    <insert id="addPerson" parameterType="Person">
+         INSERT ignore INTO person(name, page) values(#{name}, #{page})
+    </insert>
+
+    <delete id="deletePersonById" parameterType="int">
+        DELETE from person where pid=#{pid}
+    </delete>
+</mapper>

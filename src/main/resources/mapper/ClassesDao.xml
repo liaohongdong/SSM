@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.liaohongdong.ssm.dao.ClassesDao">
+    <select id="getClasses" resultMap="getClassesMap" parameterType="int">
+        SELECT * from classes c, teacher t where c.cid = t.tid and c.cid = #{cid}
+    </select>
+    <resultMap id="getClassesMap" type="Classes">
+        <id column="cid" property="cid"/>
+        <result column="cname" property="cname"/>
+        <association property="teacher" javaType="Teacher">
+            <id column="tid" property="tid"/>
+            <result column="tname" property="tname"/>
+        </association>
+    </resultMap>
+
+    <select id="getTeacher" resultMap="getTeacherMap" parameterType="int">
+        select * from teacher t,classes c where t.tid = c.cid and t.tid=#{tid}
+    </select>
+    <resultMap id="getTeacherMap" type="Teacher">
+        <id column="tid" property="tid"/>
+        <result column="tname" property="tname"/>
+        <association property="classes" javaType="Classes">
+            <id column="cid" property="cid"/>
+            <result column="cname" property="cname"/>
+        </association>
+    </resultMap>
+
+    <select id="getClasses2" resultMap="getClassesMap2">
+        select * from classes c where c.cid = #{cid};
+    </select>
+    <resultMap id="getClassesMap2" type="Classes">
+        <id column="cid" property="cid"/>
+        <result column="cname" property="cname"/>
+        <collection property="teacher" column="tid" select="getTeacherCollection" javaType="Teacher"></collection>
+    </resultMap>
+    <select id="getTeacherCollection" parameterType="int" resultType="Teacher">
+        select tid tid,tname tname from teacher t where t.tid = #{tid}
+    </select>
+
+</mapper>
